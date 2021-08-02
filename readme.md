@@ -42,7 +42,7 @@ Pulsar Producer
         - http://localhost:3000/produce
 
 Pulsar add consumer, currently a consumer is added on the application, when it started, but you can add max of 4 total
-    - In a browser create sample producer by calling
+    - In a browser create sample consumer by calling
         - http://localhost:3000/consumer
 
 

@@ -43,7 +43,7 @@
 Note: in this sample once the message is consumed, the consumer (number 1) will then end
 ```
 
-##### NodeJS Pulsar client app
+## NodeJS Pulsar client app
 
 ```
 - npm i

@@ -50,6 +50,13 @@ Note: in this sample once the message is consumed, the consumer (number 1) will 
 - npm start
 ```
 
+## NodeJS Pulsar client app Singletone
+
+```
+- npm i
+- npm run start_st
+```
+
 #### Pulsar Producer
 
 ```

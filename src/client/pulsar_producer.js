@@ -55,6 +55,7 @@ class PulsarProducer {
     }
 
     await client.close();
+    return this;
   }
 }
 

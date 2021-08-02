@@ -50,13 +50,13 @@ Note: in this sample once the message is consumed, the consumer (number 1) will 
 - npm start
 ```
 
-## Pulsar Producer
+#### Pulsar Producer
 
 ```
 - In a browser create sample producer by calling http://localhost:3000/produce
 ```
 
-## Pulsar add consumer, currently a consumer is added on the application, when it started, but you can add max of 4 total
+#### Pulsar add consumer, currently a consumer is added on the application, when it started, but you can add max of 4 total
 
 ```
 - In a browser create sample consumer by calling http://localhost:3000/consumer

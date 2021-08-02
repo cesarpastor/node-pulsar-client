@@ -11,7 +11,7 @@ Run Pulsar Docker
     - docker-compose down
     - docker-machine stop default
 
-After succesfully running pulsar on docker you can access bellow WEB UI for pulsar
+After succesfully running pulsar on docker you can access bellow WEB UI for pulsar, 192.168.99.100 is the docker machine IP
     - PULSAR UI MANAGER
         - http://192.168.99.100:3000/
     - ADD PULSAR CONNECTION

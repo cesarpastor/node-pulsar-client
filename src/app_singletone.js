@@ -9,16 +9,18 @@ const APP_PORT = 3000;
 
 app = express();
 
+counterExitTimeout = 0;
 async function consumerCallback(message) {
   var data = JSON.parse(message);
-  if (data.id == 100000) {
+  if (data.id == 10 && counterExitTimeout < 5) {
+    counterExitTimeout++;
     setTimeout(function () {
       console.log(`TEST TIMEOUT FOR DATA ID ${data.id}`);
-      console.log(new Date(), `PROCESS MESSAGE: ${message}`);
+      console.log(new Date(), `PROCESSED MESSAGE: ${message}`);
       return true;
     }, 20000);
   } else {
-    console.log(new Date(), `PROCESS MESSAGE: ${message}`);
+    console.log(new Date(), `PROCESSED MESSAGE: ${message}`);
     return true;
   }
 }

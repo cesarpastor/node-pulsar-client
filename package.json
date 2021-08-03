@@ -6,13 +6,19 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./src/app.js",
-    "start_st": "node ./src/app_singletone.js"
+    "st": "node ./src/app_singletone.js",
+    "ws": "nodemon ./src/app_ws.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
+    "express-ws": "^5.0.2",
     "pulsar-client": "^1.4.0-rc.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
   }
 }

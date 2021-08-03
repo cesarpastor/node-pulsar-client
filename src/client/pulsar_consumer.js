@@ -42,8 +42,8 @@ class PulsarConsumer {
     return JSON.stringify(data);
   }
 
-  async consume(callback) {
-    if (!callback) {
+  async consume(classCallback, callbackMethod) {
+    if (!classCallback) {
       throw new Error("Consumer consume callback is needed");
     }
     console.log(`CONSUMER ${this.name} STARTED`);
@@ -69,8 +69,15 @@ class PulsarConsumer {
           `${this.name} - Message received: `,
           msg.getData().toString()
         );
+        var process_result;
+        if (!callbackMethod) {
+          process_result = await classCallback(msg.getData().toString());
+        } else {
+          process_result = await classCallback[callbackMethod](
+            msg.getData().toString()
+          );
+        }
 
-        var process_result = await callback(msg.getData().toString());
         if (process_result) {
           consumer.acknowledge(msg);
         }

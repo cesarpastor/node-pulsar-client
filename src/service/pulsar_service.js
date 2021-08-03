@@ -8,11 +8,11 @@ class PulsarService {
   consumers;
   producers;
 
-  addConsumer(consumer, consumerCallback) {
+  addConsumer(consumer, consumerCallback, callbackMethod) {
     let _consumer = this.consumers.find((x) => x.TOPIC == consumer.TOPIC);
     if (!_consumer) {
       this.consumers.push(consumer);
-      consumer.consume(consumerCallback);
+      consumer.consume(consumerCallback, callbackMethod);
     }
   }
 
